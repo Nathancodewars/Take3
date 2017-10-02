@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "119566194775",
+    "firebase_url": "https://take3-f2b53.firebaseio.com",
+    "project_id": "take3-f2b53",
+    "storage_bucket": "take3-f2b53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119566194775:android:31d289ae5c85111b",
+        "android_client_info": {
+          "package_name": "com.example.nath.take3app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119566194775-60csnre91318g5nrkr8j6cfgttih76t4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nath.take3app",
+            "certificate_hash": "621ca1995a1fda8ab68861ef7f520c15a365a539"
+          }
+        },
+        {
+          "client_id": "119566194775-upc6a7c7jk3enr7pk4g41o6dganbf3l4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsPqMg6tNj2y9iZZy5ML_WxiOgUlqnLc8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119566194775-upc6a7c7jk3enr7pk4g41o6dganbf3l4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

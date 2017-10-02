@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Take 3 n Tag</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="auth_failed">Failed to login.</string>
+    <string name="auth_mtx">Please enter a username or password.</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="signIn">Sign In</string>
+    <string name="fbLogin">Login with Facebook</string>
+
+    <string name="botNavCamera">Camera</string>
+    <string name="botNavAboutUs">About Us</string>
+    <string name="title_activity_side_drawer_test">sideDrawerTestActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+</resources>
