@@ -1,4 +1,4 @@
-package com.example.nath.take3app.activity;
+package com.example.nath.take3app.activity.homepage;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -3,10 +3,15 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-
+    <!--logo-->
     <dimen name="logo_height">300dp</dimen>
     <dimen name="logo_top_padding">50dp</dimen>
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <!--btn dimen-->
+    <dimen name="btn_width">238dp</dimen>
+    <dimen name="btn_height">45dp</dimen>
 </resources>
