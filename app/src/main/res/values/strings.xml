@@ -16,6 +16,7 @@
     <string name="fbLogin">Login with Facebook</string>
 
     <!--bottom view navigation-->
+    <string name="botNavHome">Home</string>
     <string name="botNavCamera">Camera</string>
     <string name="botNavAboutUs">About Us</string>
     <string name="title_activity_side_drawer_test">sideDrawerTestActivity</string>
@@ -28,5 +29,15 @@
     
     <!--register activity strings-->
     <string name="full_name">Full Name</string>
+
+
+
+
+
+
+
+
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
 
 </resources>

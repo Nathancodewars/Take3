@@ -12,8 +12,11 @@
 
         <activity
             android:name=".activity.logins.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name">
+        </activity>
+
+
+        <activity android:name=".activity.homepage.homePageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,16 +24,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.logins.loginActivity" />
 
-        <activity android:name=".activity.homepage.homePageActivity" />
+        <activity android:name=".activity.logins.registerActivity" />
 
-        <activity android:name=".activity.logins.loginActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.homepage.cameraActivity" />
 
-        <activity android:name=".activity.logins.registerActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-
-            />
+        <activity android:name=".activity.homepage.aboutUsActivity" />
 
 
 

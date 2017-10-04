@@ -1,28 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nath.take3app.activity.homepage.homePageActivity">
 
-
-
-
-
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation"
-
-        />
+        android:layout_height="match_parent">
 
 
-</RelativeLayout>
+        <!--Top toolbar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/relTopNav">
+
+            <include layout="@layout/layout_top_tab" />
+
+        </RelativeLayout>
+
+
+
+        <!--Middle section-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relTopNav">
+
+            <include layout="@layout/layout_center_viewpager"/>
+
+        </RelativeLayout>
+
+
+
+        <!--Bottom Navigation-->
+
+        <include layout="@layout/layout_bottom_navigation"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="?android:attr/windowBackground"-->
+        <!--app:menu="@menu/navigation"-->
+
+        <!--/>-->
+
+
+</android.support.design.widget.CoordinatorLayout>
