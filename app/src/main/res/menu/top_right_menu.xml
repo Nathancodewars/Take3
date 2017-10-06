@@ -4,14 +4,21 @@
 
 
     <item
-        android:id="@+id/action_settings"
-        android:icon="@android:drawable/ic_menu_preferences"
-        android:title="settingsa1" />
+        android:id="@+id/action_donate"
+        android:title="Donate" />
 
     <item
         android:id="@+id/action_help"
-        android:icon="@android:drawable/ic_menu_help"
-        android:title="Logout" />
+        android:title="help" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings" />
+
+
+    <item
+        android:id="@+id/action_Logout"
+        android:title="Log Out" />
 
 
 

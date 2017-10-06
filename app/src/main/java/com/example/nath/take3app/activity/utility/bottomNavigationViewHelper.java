@@ -50,8 +50,6 @@ public class bottomNavigationViewHelper {
 
 
                 }
-
-
                 return false;
 
             }

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.example.nath.take3app.R;
 import com.example.nath.take3app.activity.utility.bottomNavigationViewHelper;
+import com.example.nath.take3app.activity.utility.topRightMenuHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 public class homePageActivity extends AppCompatActivity {
@@ -23,7 +24,10 @@ public class homePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Log.d(TAG, "onCreate: Starting.");
+
+
         setupBottomNavigationView();
+        setUpToolBar();
     }
 
 
@@ -49,26 +53,13 @@ public class homePageActivity extends AppCompatActivity {
     /*
     * Setup Top right nav
      */
+
     private void setUpToolBar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.topTabs);
         setSupportActionBar(toolbar);
 
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
-            @Override
-            public boolean onMenuItemClick(MenuItem item){
-                Log.d(TAG, "OnMenuItemClick: clicked menu item " + item);
-                switch(item.getItemId()){
-                    case R.id.action_settings:
-                        Log.d(TAG, "onMenuItemClick: Navigating to action setting.");
-                }
-                return false;
-            }
-
-
-        });
+        topRightMenuHelper.enableToolBar(mContext, toolbar);
     }
-
-
 
 
     @Override
@@ -76,4 +67,5 @@ public class homePageActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.top_right_menu, menu);
         return true;
     }
+
 }

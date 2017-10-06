@@ -33,6 +33,11 @@
         <activity android:name=".activity.homepage.aboutUsActivity" />
 
 
+        <activity android:name=".activity.menuFiles.donateActivity" />
+
+        <activity android:name=".activity.menuFiles.settingsActivity" />
+
+
 
     </application>
 
