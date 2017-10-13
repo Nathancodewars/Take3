@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         setupFirebaseAuth();
-        registerSetup();
-
+        registerBtnSetup();
+        loginBtnSetup();
 
 
 
@@ -80,8 +80,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void loginBtnSetup(){
 
-    private void registerSetup(){
+        Button btnLogin = (Button) findViewById(R.id.activity_main_btn_login);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: register setup btn onClick");
+
+                Intent intent = new Intent(mContext, loginActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    private void registerBtnSetup(){
 
         Button btnLogin = (Button) findViewById(R.id.activity_main_btn_register);
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(mContext, registerActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -159,14 +171,14 @@ public class MainActivity extends AppCompatActivity {
     private void checkCurrentUser(FirebaseUser user){
         Log.d(TAG, "checkCurrentUser: check if user is logged in.");
         if(user ==null){
-            Intent intent = new Intent(mContext, loginActivity.class);
-            startActivity(intent);
+
         }
-//        else{
-//            Intent intent = new Intent(MainActivity.this, homePageActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        else{
+            Intent intent = new Intent(MainActivity.this, homePageActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        }
     }
 
 

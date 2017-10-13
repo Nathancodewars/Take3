@@ -83,7 +83,7 @@ public class loginActivity extends AppCompatActivity {
 
     @Override
     public void onStop() {
-        Log.d(TAG, "wtf wtf");
+//        Log.d(TAG, "wtf wtf");
         super.onStop();
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
@@ -124,6 +124,11 @@ public class loginActivity extends AppCompatActivity {
                                         Log.d(TAG,"signInWithEmail:Successful");
                                         Toast.makeText(mContext, "successful signed in...",
                                                 Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(mContext, homePageActivity.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        startActivity(intent);
+                                        finish();
+
                                     }
 
 
@@ -142,13 +147,12 @@ public class loginActivity extends AppCompatActivity {
 
         /*
         if user = logged in navigate to homepage
-
          */
-        if(mAuth.getCurrentUser() != null){
-            Intent intent = new Intent(loginActivity.this, homePageActivity.class);
-            startActivity(intent);
-            finish();
-        }
+//        if(mAuth.getCurrentUser() != null){
+//            Intent intent = new Intent(loginActivity.this, homePageActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
 
 
     }

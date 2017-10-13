@@ -30,9 +30,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/relTopNav">
+            android:layout_below="@id/relTopNav"
+            android:id="@+id/middleMainContainer">
 
-            <include layout="@layout/layout_center_viewpager"/>
 
         </RelativeLayout>
 

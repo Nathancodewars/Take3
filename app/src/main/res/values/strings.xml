@@ -32,6 +32,9 @@
 
     <!--register activity strings-->
     <string name="full_name">Full Name</string>
+    <string name="reg_failed">Failed to Register.</string>
+    <string name="reg_success">Successfully Registered.</string>
+    <string name="tv_please_wait">Please Wait.</string>
 
 
 
@@ -42,5 +45,11 @@
 
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
+
+    <!--Firebase Database stuff-->
+    <string name="dbname_personal_details">personal_details</string>
+
+
+
 
 </resources>

@@ -36,7 +36,7 @@ public class cameraActivity extends AppCompatActivity {
 
         BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewBar);
         bottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
-        bottomNavigationViewHelper.enableNavigation(mContext, bottomNavigationViewEx);
+//        bottomNavigationViewHelper.enableNavigation(mContext, bottomNavigationViewEx);
 
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(activity_num);

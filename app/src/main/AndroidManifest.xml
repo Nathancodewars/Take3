@@ -13,15 +13,16 @@
         <activity
             android:name=".activity.logins.MainActivity"
             android:label="@string/app_name">
-        </activity>
-
-
-        <activity android:name=".activity.homepage.homePageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+        <activity android:name=".activity.homepage.homePageActivity" >
+
         </activity>
 
         <activity android:name=".activity.logins.loginActivity" />
@@ -31,7 +32,6 @@
         <activity android:name=".activity.homepage.cameraActivity" />
 
         <activity android:name=".activity.homepage.aboutUsActivity" />
-
 
         <activity android:name=".activity.menuFiles.donateActivity" />
 

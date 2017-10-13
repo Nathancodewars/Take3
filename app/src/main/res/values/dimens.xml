@@ -14,4 +14,8 @@
     <!--btn dimen-->
     <dimen name="btn_width">238dp</dimen>
     <dimen name="btn_height">45dp</dimen>
+
+    <!--progress bar dimen-->
+    <dimen name="prog_height">100dp</dimen>
+
 </resources>
