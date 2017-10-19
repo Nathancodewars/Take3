@@ -25,7 +25,7 @@ public class aboutUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         setupBottomNavigationView();
-        Log.d(TAG, "onCreate: starting up.");
+        Log.d(TAG, "onCreate: stag up.");
     }
 
     /*

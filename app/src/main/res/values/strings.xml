@@ -40,6 +40,10 @@
 
 
 
+    <!--submit activity-->
+    <string name="activity_submit_upload">Upload</string>
+    <string name="selected_bitmap">selected_bitmap</string>
+    <string name="selected_image">selected_image</string>
 
 
 
@@ -48,6 +52,9 @@
 
     <!--Firebase Database stuff-->
     <string name="dbname_personal_details">personal_details</string>
+
+
+
 
 
 

@@ -171,9 +171,6 @@ public class MainActivity extends AppCompatActivity {
     private void checkCurrentUser(FirebaseUser user){
         Log.d(TAG, "checkCurrentUser: check if user is logged in.");
         if(user ==null){
-
-        }
-        else{
             Intent intent = new Intent(MainActivity.this, homePageActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);

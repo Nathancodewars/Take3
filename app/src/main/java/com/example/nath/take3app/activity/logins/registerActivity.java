@@ -216,25 +216,4 @@ public class registerActivity extends AppCompatActivity {
             mAuth.removeAuthStateListener(mAuthListener);
         }
     }
-
-
-
-
-
-    private boolean isStringNull(String string){
-        Log.d(TAG, "isStringNull: checking string if null");
-
-        if(string.equals("")){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-
-
-
-
-
-
 }
