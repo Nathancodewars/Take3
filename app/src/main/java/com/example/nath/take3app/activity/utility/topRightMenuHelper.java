@@ -28,15 +28,6 @@ public class topRightMenuHelper {
                         context.startActivity(intent1);
                         break;
 
-                    case R.id.action_settings:
-                        Intent intent2 = new Intent(context, settingsActivity.class);
-                        context.startActivity(intent2);
-                        break;
-
-                    case R.id.action_help:
-                        Intent intent3 = new Intent(context, homePageActivity.class);
-                        context.startActivity(intent3);
-                        break;
 
                     case R.id.action_Logout:
                         Intent intent4 = new Intent(context, homePageActivity.class);

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip" >
+
+    <TextView
+        android:id="@+id/row_layout_main_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:id="@+id/row_layout_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <EditText
+        android:id="@+id/row_layout_qty_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/row_layout_checkBox"
+        android:layout_marginRight="16dp"
+        android:imeOptions="actionDone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center_vertical"
+        android:text="Quantity:"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/row_layout_qty_input"
+
+        />
+
+</RelativeLayout>

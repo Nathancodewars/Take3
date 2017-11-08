@@ -1,34 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nath.take3app">
-    <uses-permision android:name="android.permission.INTERNET"/>
-    <uses-permision android:name="android.permission.CAMERA"/>
-    <uses-permision android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permision android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+
 
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
-        android:allowBackup="true"
+
+
+    android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_application_id"/>
+
         <activity
             android:name=".activity.logins.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/facebook_application_protocol_id" />
+
+
+            </intent-filter>
+
         </activity>
 
 
-        <activity android:name=".activity.homepage.homePageActivity" >
+        <activity android:name=".activity.homepage.homePageActivity"
+            >
 
         </activity>
 
@@ -45,6 +65,8 @@
         <activity android:name=".activity.menuFiles.settingsActivity" />
 
         <activity android:name=".activity.homepage.submitActivity" />
+
+        <activity android:name=".activity.homepage.displayResultActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

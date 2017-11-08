@@ -21,20 +21,20 @@
                     android:layout_height="30dp"
                     android:layout_marginEnd="20dp"
                     android:layout_centerVertical="true"
-                    android:id="@+id/snippet_next_top_bar_ic_back_arrow"
+                    android:id="@+id/snippet_displayresult_top_bar_ic_back_arrow"
                     android:src="@drawable/ic_back_arrow"/>
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/activity_submit_upload"
+                    android:text="@string/activity_results_finish"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="15dp"
                     android:textSize="20sp"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_centerVertical="true"
-                    android:id="@+id/tvUpload"
+                    android:id="@+id/result_top_finish"
                     />
 
 

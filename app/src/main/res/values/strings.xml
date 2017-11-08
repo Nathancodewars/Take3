@@ -7,6 +7,7 @@
 
     <string name="auth_failed">Failed to login.</string>
     <string name="auth_mtx">Please enter a username or password.</string>
+
     <!--main screen text-->
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -34,24 +35,121 @@
     <string name="full_name">Full Name</string>
     <string name="reg_failed">Failed to Register.</string>
     <string name="reg_success">Successfully Registered.</string>
-    <string name="tv_please_wait">Please Wait.</string>
 
 
-
+    <!--put Extra-->
+    <string name="selected_bitmap">selected_bitmap</string>
+    <string name="selected_image">selected_image</string>
+    <string name="vision_result">vision_result</string>
+    <string name="vision_description_only">vision_description_only</string>
 
 
     <!--submit activity-->
     <string name="activity_submit_upload">Upload</string>
-    <string name="selected_bitmap">selected_bitmap</string>
-    <string name="selected_image">selected_image</string>
-
+    <!--display result activity-->
+    <string name="activity_results_finish">Finish</string>
 
 
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
 
+    <!--loginActivity Toasts-->
+    <string name="fill_in_all_fields">Please Fill In All Fields</string>
+    <string name="failed_signed_in">Failed To Sign In Please Try Again</string>
+    <string name="successfully_signed_in">Successfully Signed In</string>
+
+    <!--FirebaseHelper Toasts-->
+    <string name="photo_uploaded_successfully">Photo Uploaded Successfully</string>
+    <string name="starting_google_vision">Starting Google Vision Please Wait&#8230;</string>
+
+    <!--displayResultActivity Toasts-->
+    <string name="please_add_qty">Please Add The Qty</string>
+    <string name="please_add_category">Please Select An Category</string>
+    <!--submitActivity Toasts-->
+    <string name="trying_to_upload">Trying To Upload</string>
+
+
+
+
+
     <!--Firebase Database stuff-->
     <string name="dbname_personal_details">personal_details</string>
+    <string name="dbname_photo_data">photo_data</string>
+    <string name="dbname_photo_data_node_categories">categories</string>
+
+
+    <!--firebase database, photo data names-->
+    <string name="dbname_photo_data_node_google_visiond">google_visiond</string>
+
+
+
+
+    <!--facebook stuff-->
+    <string name="facebook_application_id">135854367057912</string>
+    <string name="facebook_application_protocol_id">fb135854367057912</string>
+    <string name="facebook_application_secret">309e99a123cedb70299202d12dc79c7c</string>
+
+    <!--progress bar-->
+    <string name="tv_please_wait">Please Wait&#8230;</string>
+
+
+    <!--welcome screen Txt-->
+    <string name="activity_welcome_1st_tv">Take 3 n Tag allows users to take photos of rubbish to empower users to make a positive difference to our environment with 3 ease steps:</string>
+    <string name="activity_welcome_2nd_tv">1. Create User Profile\n2. Image Capture\n3. Seamless Recognition and storage of data\n4. Share your contribution</string>
+    <string name="activity_welcome_3rd_tv">Point your camera at any rubbish and make a difference. Make our Beaches, Oceans and Waterways clean AGAIN!</string>
+
+    <!--main screen TXT-->
+    <string name="activity_main_1st_tv">Take 3 pieces of rubbish with you when you leave the beach, waterway or…anywhere and you’ve made a difference.!</string>
+    <string name="activity_main_2nd_tv">Take 3 are a not-for- profit organisation established in 2009 based in Sydney, Australia.</string>
+    <string name="activity_main_3rd_tv">We deliver education programs to inspire our global community to help create a cleaner planet for wildlife and future generations.</string>
+    <string name="activity_main_4th_tv">Pick it up. Bin it. #TAKE3FORTHESEA</string>
+
+    <!--About us screen TXT-->
+    <string name="activity_about_us_1st_title">THE TAKE 3 MESSAGE IS SIMPLE:</string>
+    <string name="activity_about_us_2nd_tv">\n Take 3 pieces of rubbish with you when you leave the beach, waterway or…anywhere and you’ve made a difference.\n\n
+Take 3 are a not-for- profit organisation established in 2009 based in Sydney, Australia.\n\n
+We deliver education programs to inspire our global community to help create a cleaner planet for wildlife and future generations.\n\n
+        Pick it up. Bin it. #TAKE3FORTHESEA</string>
+
+    <string name="activity_about_us_3rd_title">HISTORY</string>
+    <string name="activity_about_us_4th_tv">\n Take 3 was born in 2009 when surfing enthusiast, Amanda Marechal, and marine ecologist, Roberta Dixon-Valk developed a simple idea to tackle the ever-growing problem of marine debris.\n\n
+Joining forces with environmentalist, Tim Silverwood, the team developed a plan and officially registered Take 3 in mid 2010. In 2011, Take 3 was awarded the inaugural Taronga Conservation Society’s Green Grant and a $50,000 prize. The prize, exposure and support from Taronga helped build the organisation and provided Take 3 with the confidence to expand.\n\n
+The rest, as they say, is history.</string>
+
+
+    <string name="activity_about_us_5th_title">VISION AND MISSION</string>
+    <string name="activity_about_us_6th_tv">\n Our vision is to be a leader in significantly reducing plastic pollution in Australia and around the globe.\n\n
+Our mission is to significantly reduce global plastic pollution through education and participation</string>
+
+    <string name="activity_about_us_7th_title">HOW IT WORKS</string>
+    <string name="activity_about_us_8th_tv">Plastic gets into the ocean in all sorts of ways but most of it comes from land. By preventing the problem in the first place, we can start to make a real impact in reducing plastic pollution.</string>
+
+    <string name="activity_about_us_9th_title">Whenever you’re at a beach, waterway or anywhere in the great outdoors, simply take 3 pieces of rubbish away with you and you’ve made a difference.</string>
+
+    <string name="activity_about_us_10th_tv">\n Picking up other people’s rubbish may not be a natural instinct, but our supporters find that they pick up many more than 3 items once they get started!\n\n
+Join together with friends to Take 3, or make it a mindful moment of your daily or weekly routine and you’ll create a new habit that’s good for both you and the planet!\n\n
+If you want to share what you’ve collected, take a picture and upload it to Instagram or Facebook using the hashtag #Take3fortheSea and logging the location. We can then record the number of items that are being removed and measure the tangible difference we’re making as a collective!
+</string>
+
+
+
+    <!--Camera Help-->
+
+    <string name="activity_help_camera_title_1">Camera</string>
+    <string name="activity_help_camera_tv_2">1. Open the camera using the button below at the very bottom.</string>
+    <string name="activity_help_camera_tv_3">2. Take a photo of the object and press OK when you are happy or retry.</string>
+    <string name="activity_help_camera_tv_4">3. Press the upload button and wait for the photo to upload and analyse.</string>
+    <string name="activity_help_camera_tv_5">4. Select the categories that apply and submit.</string>
+
+
+
+    <string name="activity_help_camera_open_camera">Open Camera</string>
+
+
+
+
+
+
 
 
 

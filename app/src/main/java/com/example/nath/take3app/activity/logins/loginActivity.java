@@ -6,7 +6,9 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,6 +42,21 @@ public class loginActivity extends AppCompatActivity {
 
         setupFirebaseAuth();
         init();
+        keyboardHide();
+    }
+
+    /** Method to hide keyboard
+     *
+     */
+    private void keyboardHide(){
+        findViewById(R.id.loginContainer).setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                return true;
+            }
+        });
     }
 
 
@@ -104,7 +121,7 @@ public class loginActivity extends AppCompatActivity {
                 String password = mEtPassword.getText().toString();
 
                 if(isStringNull(email) && isStringNull(password)){
-                    Toast.makeText(mContext, "fill in fields pls", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, R.string.fill_in_all_fields, Toast.LENGTH_SHORT).show();
                 }else{
 
                     mAuth.signInWithEmailAndPassword(email, password)
@@ -118,13 +135,13 @@ public class loginActivity extends AppCompatActivity {
                                     // signed in user can be handled in the listener.
                                     if (!task.isSuccessful()) {
                                         Log.w(TAG, "signInWithEmail:failed", task.getException());
-                                        Toast.makeText(mContext, "failed signed in..",
+                                        Toast.makeText(mContext, R.string.failed_signed_in,
                                                 Toast.LENGTH_SHORT).show();
                                     }else{
                                         Log.d(TAG,"signInWithEmail:Successful");
-                                        Toast.makeText(mContext, "successful signed in...",
+                                        Toast.makeText(mContext, R.string.successfully_signed_in,
                                                 Toast.LENGTH_SHORT).show();
-
+                                        checkCurrentUser(mAuth.getCurrentUser());
                                     }
 
 
@@ -141,14 +158,7 @@ public class loginActivity extends AppCompatActivity {
 
         });
 
-        /*
-        if user = logged in navigate to homepage
-         */
-//        if(mAuth.getCurrentUser() != null){
-//            Intent intent = new Intent(loginActivity.this, homePageActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+        checkCurrentUser(mAuth.getCurrentUser());
 
 
     }
@@ -166,7 +176,15 @@ public class loginActivity extends AppCompatActivity {
     }
 
 
-
+    private void checkCurrentUser(FirebaseUser user){
+        Log.d(TAG, "checkCurrentUser: check if user is logged in.");
+        if(user != null){
+            Intent intent = new Intent(mContext, homePageActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        }
+    }
 
 
 

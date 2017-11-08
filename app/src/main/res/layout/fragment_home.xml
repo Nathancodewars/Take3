@@ -3,14 +3,69 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="143dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="home page" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayoutTop">
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayout2"
+                android:layout_below="@id/relLayoutTop">
+                <TextView
+                    android:id="@+id/activity_main_textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_main_1st_tv"
+                    android:layout_margin="16dp" />
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/activity_main_textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_main_textView1"
+                    android:text="@string/activity_main_2nd_tv"
+                    android:layout_margin="16dp" />
+
+                <TextView
+                    android:id="@+id/activity_main_textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_main_textView2"
+                    android:text="@string/activity_main_3rd_tv"
+                    android:layout_margin="16dp"/>
+
+                <TextView
+                    android:id="@+id/activity_main_textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_main_textView3"
+                    android:text="@string/activity_main_4th_tv"
+                    android:layout_margin="16dp"/>
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

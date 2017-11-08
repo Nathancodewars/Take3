@@ -18,4 +18,8 @@
     <!--progress bar dimen-->
     <dimen name="prog_height">100dp</dimen>
 
+    <!--text size-->
+    <dimen name="title_size">25sp</dimen>
+    <dimen name="text_size">20sp</dimen>
+
 </resources>

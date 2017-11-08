@@ -60,4 +60,30 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/activity_submit_progress_circle"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/activity_submit_tv_please_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_please_wait"
+            android:layout_below="@+id/activity_submit_progress_circle"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
 </RelativeLayout>
+
+
+
+

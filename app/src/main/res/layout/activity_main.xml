@@ -85,6 +85,7 @@
 
         <!--Login with fb btn-->
         <Button
+            xmlns:facebook="http://schemas.android.com/apk/res-auto"
             android:id="@+id/activity_main_btn_fbLogin"
             android:background="@drawable/main_btn_fblogin"
             android:drawableStart="@mipmap/ic_fb_logo"

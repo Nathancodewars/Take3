@@ -3,6 +3,7 @@ package com.example.nath.take3app.activity.homepage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.FileProvider;
@@ -19,13 +21,17 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.nath.take3app.R;
 import com.example.nath.take3app.activity.logins.MainActivity;
 import com.example.nath.take3app.activity.logins.loginActivity;
+import com.example.nath.take3app.activity.utility.Permissions;
 import com.example.nath.take3app.activity.utility.bottomNavigationViewHelper;
 import com.example.nath.take3app.activity.utility.topRightMenuHelper;
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
@@ -39,6 +45,8 @@ import static android.os.Environment.getExternalStorageDirectory;
 
 public class homePageActivity extends AppCompatActivity {
 
+
+    private static final int VERIFY_PERMISSIONS_REQUEST = 1;
     private static final String TAG = "homePageActivity";
     private Context mContext = homePageActivity.this;
     private int activity_num = 0;
@@ -57,6 +65,15 @@ public class homePageActivity extends AppCompatActivity {
         setUpToolBar();
 
 
+        if(checkPermissionsArray(Permissions.PERMISSIONS)){
+
+        }else{
+            verifyPermissions(Permissions.PERMISSIONS);
+        }
+
+
+
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.middleMainContainer, fragmentHomePage.newInstance());
         transaction.commit();
@@ -65,6 +82,7 @@ public class homePageActivity extends AppCompatActivity {
 
 
     }
+
 
 
     /*
@@ -90,10 +108,14 @@ public class homePageActivity extends AppCompatActivity {
 
                     case R.id.ic_camera:
                         //launch camera
-                        dispatchTakePictureIntent();
+
+//                        dispatchTakePictureIntent();
+                        activity_num = 1;
+                        selectedFragment = fragmentCamera.newInstance();
+                        fragmenTrans(selectedFragment, bottomNavigationViewEx);
+
 //                        selectedFragment = fragmentHomePage.newInstance();
 //                        activity_num = 0;
-//                        fragmenTrans(selectedFragment, bottomNavigationViewEx);
                         break;
 
 
@@ -111,6 +133,9 @@ public class homePageActivity extends AppCompatActivity {
         });
     }
 
+
+
+
     public void fragmenTrans(Fragment selectedFragment, BottomNavigationViewEx bottomNavigationViewEx) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.middleMainContainer, selectedFragment);
@@ -122,15 +147,13 @@ public class homePageActivity extends AppCompatActivity {
         menuItem.setChecked(true);
     }
 
-
-    public void nextActTest() {
-        Log.d(TAG, "nextActTest: start intent");
-        Intent intent = new Intent(mContext, submitActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+    public void openURLDonate(){
+        String url = "http://take3.org/donate/";
+        Uri uri = Uri.parse(url); // missing 'http://' will cause crashed
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
+
     }
-
-
 
 
 
@@ -150,14 +173,12 @@ public class homePageActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_donate:
-                        break;
-                    case R.id.action_help:
-                        break;
-                    case R.id.action_settings:
+                        openURLDonate();
                         break;
                     case R.id.action_Logout:
                         mAuth.signOut();
                         break;
+
                 }
 
 
@@ -174,14 +195,6 @@ public class homePageActivity extends AppCompatActivity {
     }
 
 
-    private File createTemporaryFile(String part, String ext) throws Exception {
-        File tempDir = getExternalStorageDirectory();
-        tempDir = new File(tempDir.getAbsolutePath() + "/.temp/");
-        if (!tempDir.exists()) {
-            tempDir.mkdirs();
-        }
-        return File.createTempFile(part, ext, tempDir);
-    }
 
 /*
 ----------------------------------------------Firebase----------------------------------------------
@@ -206,6 +219,7 @@ public class homePageActivity extends AppCompatActivity {
                     Intent intent = new Intent(mContext, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
+                    finish();
 
                 }
                 // ...
@@ -304,6 +318,8 @@ public class homePageActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+
         Log.d(TAG, "onActivityResultL testing result code = " + resultCode);
         if (requestCode == REQUEST_TAKE_PHOTO && resultCode == -1) {
             Log.d(TAG, "onActivityResult: done taking a photo.");
@@ -325,5 +341,49 @@ public class homePageActivity extends AppCompatActivity {
             }
         }
     }
-}
 
+
+
+
+
+//    permissions
+
+    public void verifyPermissions(String[] permissions){
+        Log.d(TAG, "verifyPermissions: verifying permissions.");
+
+        ActivityCompat.requestPermissions(
+                homePageActivity.this,
+                permissions,
+                VERIFY_PERMISSIONS_REQUEST
+        );
+    }
+
+    public boolean checkPermissionsArray(String[] permissions){
+        Log.d(TAG, "checkPermissionsArray: checking permissions array.");
+
+        for(int i = 0; i< permissions.length; i++){
+            String check = permissions[i];
+            if(!checkPermissions(check)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    public boolean checkPermissions(String permission){
+        Log.d(TAG, "checkPermissions: checking permission: " + permission);
+
+        int permissionRequest = ActivityCompat.checkSelfPermission(homePageActivity.this, permission);
+
+        if(permissionRequest != PackageManager.PERMISSION_GRANTED){
+            Log.d(TAG, "checkPermissions: \n Permission was not granted for: " + permission);
+            return false;
+        }
+        else{
+            Log.d(TAG, "checkPermissions: \n Permission was granted for: " + permission);
+            return true;
+        }
+    }
+
+}

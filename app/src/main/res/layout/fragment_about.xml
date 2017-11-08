@@ -3,14 +3,187 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="aboutus"
-        android:padding="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:id="@+id/activity_about_us_txt"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/activity_about_us_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/about_us_top_pic"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_about_us_text_rel1"
+                android:layout_below="@id/activity_about_us_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/activity_about_us_title_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/activity_about_us_1st_title"
+                    android:textSize="@dimen/title_size"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_about_us_tv_2nd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_about_us_2nd_tv"
+                    android:layout_below="@id/activity_about_us_title_1"
+                    android:textSize="@dimen/text_size"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_about_us_text_rel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_about_us_text_rel1"
+                android:layout_marginTop="16dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/activity_about_us_3rd_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/activity_about_us_3rd_title"
+                    android:textSize="25sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/activity_about_us_4th_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_about_us_3rd_title"
+                    android:text="@string/activity_about_us_4th_tv"
+                    android:textSize="18sp"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_about_us_text_rel3"
+                android:layout_below="@id/activity_about_us_text_rel2"
+                android:layout_marginTop="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/activity_about_us_5th_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/activity_about_us_5th_title"
+                    android:textSize="25sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/activity_about_us_6th_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:layout_below="@id/activity_about_us_5th_title"
+                    android:text="@string/activity_about_us_6th_tv"
+                    android:textSize="18sp"
+
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/activity_about_us_text_rel4"
+                android:layout_below="@id/activity_about_us_text_rel3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                >
+
+                <TextView
+                    android:id="@+id/activity_about_us_7th_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/activity_about_us_7th_title"
+                    android:layout_marginTop="16dp"
+                    android:textSize="25sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/activity_about_us_8th_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_about_us_7th_title"
+                    android:text="@string/activity_about_us_8th_tv"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/activity_about_us_9th_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_about_us_8th_tv"
+                    android:textStyle="bold|italic"
+                    android:text="@string/activity_about_us_9th_title"
+                    android:layout_marginTop="16dp"
+                    android:textSize="25sp"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/activity_about_us_10th_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_about_us_9th_title"
+                    android:text="@string/activity_about_us_10th_tv"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="18sp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
 </RelativeLayout>

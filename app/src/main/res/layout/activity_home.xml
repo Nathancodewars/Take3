@@ -17,7 +17,7 @@
         <!--Top toolbar-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:id="@+id/relTopNav">
 
             <include layout="@layout/layout_top_tab" />
@@ -31,7 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/relTopNav"
-            android:id="@+id/middleMainContainer">
+            android:id="@+id/middleMainContainer"
+            android:layout_marginBottom="50dp"
+            >
 
 
         </RelativeLayout>

@@ -1,15 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="164dp"
-        android:text="Camera" />
-</RelativeLayout>
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/title_size"
+                android:text="@string/activity_help_camera_title_1"
+                android:layout_margin="@dimen/fab_margin"
+                />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/text_size"
+                android:text="@string/activity_help_camera_tv_2"
+                android:layout_margin="@dimen/fab_margin"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/text_size"
+                android:text="@string/activity_help_camera_tv_3"
+                android:layout_margin="@dimen/fab_margin"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/activity_about_us_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/camera_function"
+                    android:layout_margin="@dimen/fab_margin"
+
+                    />
+
+            </RelativeLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/text_size"
+                android:text="@string/activity_help_camera_tv_4"
+                android:layout_margin="@dimen/fab_margin"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/submit_function"
+                    android:layout_margin="@dimen/fab_margin"
+
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/text_size"
+                android:text="@string/activity_help_camera_tv_5"
+                android:layout_margin="@dimen/fab_margin"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/qty_function"
+                    android:layout_margin="@dimen/fab_margin"
+
+                    />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/activity_fragment_camera_CameraOpenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_help_camera_open_camera"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:layout_margin="16dp"
+                android:background="@drawable/camera_fragment_open_camera_btn"
+                />
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -11,16 +11,22 @@ public class PhotoData {
     private String image_path;
     private String user_id;
     private String vision_analysis;
+    private Double latitude;
+    private Double longitude;
+
+
 
     public PhotoData() {
     }
 
-    public PhotoData(boolean google_visiond, String data_created, String image_path, String user_id, String vision_analysis) {
+    public PhotoData(boolean google_visiond, String data_created, String image_path, String user_id, String vision_analysis, Double latitude, Double longitude) {
         this.google_visiond = google_visiond;
         this.data_created = data_created;
         this.image_path = image_path;
         this.user_id = user_id;
         this.vision_analysis = vision_analysis;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public boolean isGoogle_visiond() {
@@ -63,6 +69,21 @@ public class PhotoData {
         this.vision_analysis = vision_analysis;
     }
 
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
 
     @Override
     public String toString() {
@@ -72,6 +93,8 @@ public class PhotoData {
                 ", image_path='" + image_path + '\'' +
                 ", user_id='" + user_id + '\'' +
                 ", vision_analysis='" + vision_analysis + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
                 '}';
     }
 }

@@ -8,15 +8,6 @@
         android:title="Donate" />
 
     <item
-        android:id="@+id/action_help"
-        android:title="help" />
-
-    <item
-        android:id="@+id/action_settings"
-        android:title="Settings" />
-
-
-    <item
         android:id="@+id/action_Logout"
         android:title="Log Out" />
 

@@ -38,7 +38,7 @@ public class registerActivity extends AppCompatActivity {
     private Button btnRegister;
     private String email, password, full_name;
     private EditText mEmail, mPassword, mName;
-    private firebaseHelper firebaseHelper;
+    private FirebaseHelper firebaseHelper;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
     private ProgressBar mProgressBar;
@@ -52,7 +52,7 @@ public class registerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         Log.d(TAG, "onCreate: starting registerActivity");
 
-        firebaseHelper = new firebaseHelper(mContext);
+        firebaseHelper = new FirebaseHelper(mContext);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         myRef = mFirebaseDatabase.getReference();
 
@@ -80,8 +80,6 @@ public class registerActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
     }
 
 
@@ -132,7 +130,7 @@ public class registerActivity extends AppCompatActivity {
     private boolean checkInputs(String email, String username, String password){
         Log.d(TAG, "checkInputs: checking inputs for null values.");
         if(email.equals("") || username.equals("") || password.equals("")){
-            Toast.makeText(mContext, "All fields must be filled out.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, R.string.fill_in_all_fields, Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

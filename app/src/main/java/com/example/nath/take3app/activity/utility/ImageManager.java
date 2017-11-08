@@ -63,7 +63,6 @@ public class ImageManager {
             Log.d(TAG, "getBytesFromBitmap: newBM.getByteSize: " + newBM.getByteCount());
         }
 
-        newBM = rotateImage(newBM, 90);
 
         newBM.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 
