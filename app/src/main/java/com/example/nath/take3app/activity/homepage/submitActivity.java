@@ -312,13 +312,13 @@ public class submitActivity extends AppCompatActivity {
                 getLocation();
 
                 Log.d(TAG, "onCreate: mtvUploadBTNinit visionResult: "+ visionResult);
-                Bitmap newBitmap = rotateImage(mBitmap, 270);
-                mFirebaseMethods.uploadNewPhoto(newBitmap, mCurrentPhotoPath, visionResult, currentLatti, currentLongi);
+//                Bitmap newBitmap = rotateImage(mBitmap, 270);
+                mFirebaseMethods.uploadNewPhoto(mBitmap, mCurrentPhotoPath, visionResult, currentLatti, currentLongi);
 
                 Toast.makeText(mContext, R.string.trying_to_upload, Toast.LENGTH_SHORT).show();
 
                 try {
-                    callCloudVision(newBitmap);
+                    callCloudVision(mBitmap);
                     // Code that might throw
                     // an exception.
                 } catch (Exception e) {
@@ -375,7 +375,7 @@ public class submitActivity extends AppCompatActivity {
             mBitmap = BitmapFactory.decodeStream(fis, null, bmOptions);
             fis.close();
 
-            mBitmap = rotateImage(mBitmap, 90);
+            mBitmap = rotateImage(mBitmap, 270);
             mImageView.setImageBitmap(mBitmap);
 
 
