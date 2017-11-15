@@ -149,11 +149,6 @@ public class fragmentCamera extends Fragment{
             Log.d(TAG, "onActivityResult: attempting to navigate to final share screen.");
 
 
-//            galleryAddPic();
-//            Log.d(TAG, "onActivityResult: data = "+ data);
-//            bitmap = (Bitmap) data.getExtras().get("data");
-//            Log.d(TAG, "onActivityResult: data = "+ data.getExtras().get("data"));
-
             try {
                 Log.d(TAG, "onActivityResult: received new bitmap from camera: ");
                 Intent intent = new Intent(getActivity(), submitActivity.class);

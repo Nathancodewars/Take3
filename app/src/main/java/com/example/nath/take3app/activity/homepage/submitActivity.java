@@ -375,7 +375,7 @@ public class submitActivity extends AppCompatActivity {
             mBitmap = BitmapFactory.decodeStream(fis, null, bmOptions);
             fis.close();
 
-            mBitmap = rotateImage(mBitmap, 270);
+            mBitmap = rotateImage(mBitmap, 90);
             mImageView.setImageBitmap(mBitmap);
 
 
@@ -384,7 +384,6 @@ public class submitActivity extends AppCompatActivity {
         }catch (Exception e){
 
         }
-//        Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
 
 
     }
@@ -492,11 +491,7 @@ public class submitActivity extends AppCompatActivity {
 
 
 
-//                ((EditText)findViewById(R.id.etLocationLat)).setText("Latitude: " + latti);
-//                ((EditText)findViewById(R.id.etLocationLong)).setText("Longitude: " + longi);
             } else {
-//                ((EditText)findViewById(R.id.etLocationLat)).setText("Unable to find correct location.");
-//                ((EditText)findViewById(R.id.etLocationLong)).setText("Unable to find correct location. ");
             }
         }
 
